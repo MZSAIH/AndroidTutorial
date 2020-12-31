@@ -11,13 +11,15 @@ public class MainActivity extends AppCompatActivity {
     TextView tvHello;
     EditText etName;
     Button btnHello;
+    int sumVar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tvHello = findViewById(R.id.tv_hello);
-        etName = findViewById(R.id.et_name);
+
+        tvHello  = findViewById(R.id.tv_hello);
+        etName   = findViewById(R.id.et_name);
         btnHello = findViewById(R.id.btn_hello);
 
         btnHello.setOnClickListener(new View.OnClickListener() {
@@ -25,8 +27,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //On click
                 tvHello.setText("hello "+etName.getText());
+
             }
         });
+        Sum(5,10);
+
+
+    }
+
+     void Sum(int n1, int n2){
+        sumVar = n1 + n2;
     }
 
 }
