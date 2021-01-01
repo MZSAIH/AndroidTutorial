@@ -11,13 +11,14 @@ import android.widget.Toast;
 public class CalculatorActivity extends AppCompatActivity {
     String sResult;
     EditText risultatojs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         risultatojs = findViewById(R.id.risultato);
         sResult = "";
-
+        Toast.makeText(CalculatorActivity.this,getIntent().getStringExtra(MainActivity.VARIABLE1),Toast.LENGTH_SHORT).show();
         /*Button zero_js = findViewById(R.id.zero);
         Button uno_js = findViewById(R.id.uno);
         Button due_js = findViewById(R.id.due);
@@ -39,6 +40,7 @@ public class CalculatorActivity extends AppCompatActivity {
         Button uguale_js = findViewById(R.id.uguale);
         Button punto_js = findViewById(R.id.meno);*/
     }
+
 
     public void buttonClick(View view){
         Button btn = (Button) view;
