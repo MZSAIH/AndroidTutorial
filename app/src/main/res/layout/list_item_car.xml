@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F1D9C4">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_background"/>
+
+    <LinearLayout
+        android:id="@+id/text_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/marque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Marque"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#8BC34A"/>
+        <TextView
+            android:id="@+id/hp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="180"
+            android:textSize="15sp"
+            android:textColor="#042AD6"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"        />
+</RelativeLayout>

@@ -29,6 +29,10 @@ public class Car {
         MaxSpeed = maxSpeed;
     }
 
+    public Car(){
+
+    }
+
     public Car(String marque, int horsepower, int maxspeed){
         this.Marque = marque;
         this.MaxSpeed = maxspeed;
