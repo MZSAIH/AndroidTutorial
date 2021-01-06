@@ -76,6 +76,7 @@ public class CalculatorActivity extends AppCompatActivity {
             default:
                 break;
         }
+
         risultatojs.setText(sResult);
     }
 }

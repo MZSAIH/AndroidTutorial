@@ -10,6 +10,10 @@ import android.widget.Toast;
 public class CounterActivity extends AppCompatActivity {
     int mCounter;
     TextView tvCounter;
+
+    char Operation;
+    int reslt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +22,22 @@ public class CounterActivity extends AppCompatActivity {
         tvCounter = findViewById(R.id.txtcount);
         mCounter = 0;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public void countUp(View view){
         mCounter++;
