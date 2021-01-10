@@ -1,16 +1,16 @@
 package com.mzsaih.androidtutorial;
 
 public class Car {
-    private String Marque;
+    private String marque;
     private int HorsePower;
     private int MaxSpeed;
 
     public String getMarque() {
-        return Marque;
+        return marque;
     }
 
     public void setMarque(String marque) {
-        Marque = marque;
+        this.marque = marque;
     }
 
     public int getHorsePower() {
@@ -34,7 +34,7 @@ public class Car {
     }
 
     public Car(String marque, int horsepower, int maxspeed){
-        this.Marque = marque;
+        this.marque = marque;
         this.MaxSpeed = maxspeed;
         this.HorsePower = horsepower;
     }
