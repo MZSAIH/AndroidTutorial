@@ -28,6 +28,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -50,24 +57,6 @@ public class MainActivity extends AppCompatActivity {
         //get ListView From XML
         list = findViewById(R.id.list1);
 
-        //DATA
-
-        //Create first car
-        /*Car car1 = new Car();
-        car1.setMarque("Cadillac");
-        car1.setHorsePower(300);
-
-        Car car2 = new Car();
-        car2.setMarque("Honda");
-        car2.setHorsePower(240);
-
-        Car car3 = new Car();
-        car3.setMarque("GMC");
-        car3.setHorsePower(540);
-
-        carlist.add(car1);
-        carlist.add(car2);
-        carlist.add(car3);*/
         //Create cars list
         carlist = new ArrayList<>();
         DatabaseReference db = FirebaseDatabase.getInstance().getReference();
