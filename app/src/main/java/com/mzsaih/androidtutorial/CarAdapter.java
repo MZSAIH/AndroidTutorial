@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.mzsaih.androidtutorial.data.Car;
+
 import java.util.ArrayList;
 
 public class CarAdapter extends BaseAdapter {

@@ -1,4 +1,4 @@
-package com.mzsaih.androidtutorial;
+package com.mzsaih.androidtutorial.data;
 
 public class Car {
     private String marque;
@@ -28,14 +28,29 @@ public class Car {
     public void setMaxSpeed(int maxSpeed) {
         MaxSpeed = maxSpeed;
     }
-
-    public Car(){
-
-    }
-
+    public Car(){}
     public Car(String marque, int horsepower, int maxspeed){
         this.marque = marque;
         this.MaxSpeed = maxspeed;
         this.HorsePower = horsepower;
+    }
+    public Car(String marque, int horsepower){
+        this.marque = marque;
+        this.HorsePower = horsepower;
+    }
+
+    public Car(Car car){
+        this.marque = car.marque;
+        this.MaxSpeed = car.MaxSpeed;
+        this.HorsePower = car.HorsePower;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "marque='" + marque + '\'' +
+                ", HorsePower=" + HorsePower +
+                ", MaxSpeed=" + MaxSpeed +
+                '}';
     }
 }

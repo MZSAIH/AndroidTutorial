@@ -14,16 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTutorial">
         <activity android:name=".ChangeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".TestClassActivity"></activity>
         <activity android:name=".CounterActivity" />
         <activity android:name=".CalculatorActivity" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

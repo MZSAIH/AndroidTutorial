@@ -1,40 +1,19 @@
 package com.mzsaih.androidtutorial;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ArrayAdapter;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.play.core.appupdate.AppUpdateInfo;
-import com.google.android.play.core.appupdate.AppUpdateManager;
-import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
-import com.google.android.play.core.install.model.AppUpdateType;
-import com.google.android.play.core.install.model.UpdateAvailability;
-import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.mzsaih.androidtutorial.data.Car;
+import com.mzsaih.androidtutorial.data.Garage;
 
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,11 +27,28 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseAnalytics fa;
     public static final String VARIABLE1 = "VAR1";
+    private static final String TAG  = "CLASSES";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fa = FirebaseAnalytics.getInstance(this);
+
+
+        Car c1 = new Car("bmw",140,300);
+        Car c2 = new Car(c1);
+        Car c3 = new Car("Mercedes",250);
+        Car c4 = new Car();
+
+        Garage g = new Garage(105,"Hay charaf 2");
+
+        g.addCars(0,c1);
+        g.addCars(7,c3);
+        Car[] cars = new Car[4];
+
+        Log.d(TAG, g.getCars());
+
+
+        /*fa = FirebaseAnalytics.getInstance(this);
 
         //get ListView From XML
         list = findViewById(R.id.list1);
@@ -80,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*tvHello  = findViewById(R.id.tv_hello);
+        tvHello  = findViewById(R.id.tv_hello);
         etName   = findViewById(R.id.et_name);
         btnHello = findViewById(R.id.btn_hello);
 
