@@ -13,8 +13,11 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.mzsaih.androidtutorial.data.Car;
 import com.mzsaih.androidtutorial.data.Garage;
+import com.mzsaih.androidtutorial.data.GarageArrayList;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
 
 public class MainActivity extends AppCompatActivity {
     TextView tvHello;
@@ -45,7 +48,13 @@ public class MainActivity extends AppCompatActivity {
         g.addCars(7,c3);
         Car[] cars = new Car[4];
 
-        Log.d(TAG, g.getCars());
+        GarageArrayList ga = new GarageArrayList();
+        ga.setId(4564);
+        ga.setAddress("ldfkdshfksjhdf");
+        ga.addCars(c4);
+        ga.addCars(c3);
+        ga.addCars(c3);
+        //Log.d(TAG, ga.getCars());
 
 
         /*fa = FirebaseAnalytics.getInstance(this);
